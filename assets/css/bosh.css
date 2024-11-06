@@ -1,0 +1,616 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;800&amp;display=swap");
+/*CSS Table Of Content Starts Here*/
+/*
+01. General CSS
+---------------------------
+Section css
+---------------------------
+*/
+/*CSS Table Of Content Ends Here*/
+@import "swiper-bundle.min.css";
+@import "bootstrap-icons.min.css";
+@import "odometer.css";
+@import "animate.css";
+@import "magnific-popup.css";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.css";
+@import "nice-select.css";
+@import "richtext.min.css";
+:root {
+    --body: #E7EDF6;
+    --white: #ffffff;
+    --title: #222E48;
+    --subtitle: #222E48;
+    --base: #0D47A1;
+    --hover: #ed7726;
+    --base2: #F3A102;
+    --base3: #FFBE57;
+    --base4: #FF5722;
+    --basebg1: #43A047;
+    --neutral: #071431;
+    --catebox: #E7EDF6;
+    --sign: #F8F9FC;
+    --opacitys: #979CA8;
+    --bgsection: #F8F9FC;
+    --pra: #404A60;
+    --dash: #B2B6BF;
+    --menuborder: #343E56;
+    --placeholder: #B2B6BF;
+    --pragraph: #404A60;
+    --pragraph2: #404A60;
+    --pragraph3: #354764;
+    --border: #DFE0E4;
+    --danger: #ED5050;
+    --success: #3FCA90;
+    --success2: #2E7D32;
+    --ratting: #FFBE57;
+    --mborder: #c9d5f0c9;
+    --footer: #071431;
+    --boxes1: #F3F6FA;
+    --boxes2: #FFF3F0;
+    --boxes3: #FFF9EE;
+    --boxes4: #E8EDF9;
+    --borderdot: #C1C4CC;
+    --icolor1: #9C4F41;
+    --icolor2: #9C7435;
+    --pagination: #1C1B1F;
+    --whitep: #F5F6F7;
+    --bartext: #243757;
+    --barbg: #EBEBFD;
+    --tableborder: #EBECEF;
+  }
+  /* Style the iframe to be fully visible */
+  .footer-iframe {
+    width: 100%;
+    height: 541px; /* Adjust the height as needed */
+    border: none; /* Remove the border if not needed */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+    .footer-iframe {
+        height: 1058px; /* Adjust the height for mobile devices if needed */
+    }
+}
+
+.titley{
+   font-size: 18px; /* Standart o'lcham */
+}
+
+.titlet{
+   font-size: 12px; /* Standart o'lcham */
+   font-weight: normal;
+}
+
+.d-flex.mb-20.align-items-center.justify-content-between {
+   /* margin-bottom: -20px; */
+   border-bottom: 1px solid #00000057;
+   padding-bottom: 2px;
+}
+
+.titlek{
+   font-size: 14px; /* Standart o'lcham */
+   color: #f07824;
+}
+
+
+/* Batafsil hover effekti */
+.categoris__item .readmore:hover span.fz-16 {
+   color: #ffffff; /* Matn rangi oq bo'ladi */
+}
+
+
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+ }
+
+ .mySlides {
+    display: none;
+    text-align: center;
+ }
+
+ .r {
+   background: #f07824;
+
+ }
+
+ a.readmore:hover {
+   background-color: #183e98;
+   color: white;
+}
+
+.menu__right__components {
+   position: relative;
+   left: -18px; /* Bu menyuni chap tomonga siljitadi */
+}
+
+
+a.readmore:hover i {
+   color: white;
+}
+
+ section#slideshow {
+   background-color: #183e98;
+}
+
+ .mySlides img {
+    width: 100%;
+ }
+
+ .active {
+    display: block;
+ }
+
+ .button-container {
+    text-align: left;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+ }
+
+ .button-container button {
+    background-color: #555;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    margin: 0 10px;
+ }
+
+ .button-container button:hover {
+    background-color: #777;
+ }
+
+ .dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+ }
+
+ .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+ }
+
+ .active-dot {
+    background-color: #717171;
+ }
+
+ @media only screen and (max-width: 600px) {
+    .desktop-img {
+       display: none;
+    }
+
+    .mobile-img {
+       display: block;
+    }
+ }
+
+ @media only screen and (min-width: 601px) {
+    .mobile-img {
+       display: none;
+    }
+
+    .desktop-img {
+       display: block;
+       width: 100% !important;
+    }
+ }
+
+ .titleq {
+   color: #000000;
+}
+
+
+
+ /* Popup styles */
+ .popup {
+    position: fixed;
+    left: 0;
+    top: 5;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+ }
+
+ /* Content of the popup */
+ .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    /* Make it responsive */
+    max-height: 90%;
+    /* Ensure it fits on screen */
+    overflow: auto;
+    /* Scroll if content is too big */
+    position: relative;
+ }
+
+ /* Hide the popup */
+ .hidden {
+    display: none;
+ }
+
+ /* Close button styling */
+ .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    background: none;
+    border: none;
+ }
+ .choose__section {
+    background-image: url('https://uz.post/storage/images/13695f468b9c4cbb859e4e415d7af101.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
+ .tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+ }
+
+ .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    /* Tooltip'un konumu */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+ }
+
+ .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+ }
+ .image-container {
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .image-container a {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+ }
+
+ .image-container a:hover {
+    transform: translateX(20px);
+    /* Adjust as needed */
+ }
+
+ @media (max-width: 767px) {
+    .responsive-hide {
+       display: none;
+    }
+ }
+
+ /* Faded placeholder style */
+ .faded-placeholder::placeholder {
+    color: rgba(156, 156, 156, 0.5);
+    /* Adjust the RGBA value to make it lighter or darker */
+ }
+ /* Loader elementini markazda joylashtirish va fonini yashirish */
+ .loader {
+    position: fixed;
+    /* Sahifani to'liq qoplash */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fefefe;
+    /* Fon rangini shaffof qilib ko'rsatish */
+    display: flex;
+    /* Flexbox yordamida markazda joylashtirish */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    /* Boshqa elementlardan yuqorida joylashtirish */
+ }
+
+ /* Loaderni yashirish */
+ .hidden {
+    display: none;
+ }
+
+ /* Video elementiga styling */
+ .loaderVideo {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+ }
+
+ .truckBody {
+    width: 130px;
+    height: fit-content;
+    margin-bottom: 6px;
+    animation: motion 1s linear infinite;
+ }
+
+ @keyframes motion {
+    0% {
+       transform: translateY(0px);
+    }
+
+    50% {
+       transform: translateY(3px);
+    }
+
+    100% {
+       transform: translateY(0px);
+    }
+ }
+
+
+ .truckTires {
+    width: 130px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px 0px 15px;
+    position: absolute;
+    bottom: 0;
+ }
+
+ .truckTires svg {
+    width: 24px;
+ }
+
+ .road {
+    width: 100%;
+    height: 1.5px;
+    background-color: #282828;
+    position: relative;
+    bottom: 0;
+    align-self: flex-end;
+    border-radius: 3px;
+ }
+
+ .road::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: #282828;
+    right: -50%;
+    border-radius: 3px;
+    animation: roadAnimation 1.4s linear infinite;
+    border-left: 10px solid white;
+ }
+
+ .road::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background-color: #282828;
+    right: -65%;
+    border-radius: 3px;
+    animation: roadAnimation 1.4s linear infinite;
+    border-left: 4px solid white;
+ }
+
+ .lampPost {
+    position: absolute;
+    bottom: 0;
+    right: -90%;
+    height: 90px;
+    animation: roadAnimation 1.4s linear infinite;
+ }
+
+ @keyframes roadAnimation {
+    0% {
+       transform: translateX(0px);
+    }
+
+    100% {
+       transform: translateX(-350px);
+    }
+ }
+
+ /* Hide loader initially */
+ .loader.hidden {
+    display: none;
+ }
+
+ .preloader__wrap {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 9999;
+   background: rgb(255, 255, 255);
+   position: fixed;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ .preloader__box {
+   position: relative;
+ }
+ 
+ .preloader-img {
+   max-width: 80%; /* Adjust this value to increase or decrease the image size */
+   max-height: 80vh; /* Ensure the image fits within the viewport height */
+   object-fit: contain; /* Ensures the image retains its aspect ratio */
+ }
+ /* Style the iframe to be fully visible */
+ .header-iframe {
+   width: 100%;
+   height: 541px; /* Adjust the height as needed */
+   border: none; /* Remove the border if not needed */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+   .header-iframe {
+       height: 1058px; /* Adjust the height for mobile devices if needed */
+   }
+}
+.freelanc__inneredu {
+      margin-bottom: 20px;
+  }
+
+  .freelanc__inneredu .content__box {
+      padding: 10px;
+      font-size: 14px; /* umumiy shrift hajmi */
+  }
+
+  .freelanc__inneredu .date,
+  .freelanc__inneredu .title,
+  .freelanc__inneredu .success2 {
+      margin-bottom: 8px;
+      font-size: 14px; /* individual elementlar shrift hajmi */
+  }
+
+  .freelanc__inneredu .edu__number {
+      width: 10px; /* kenglikni kichikroq qilish */
+      height: 40px; /* balandlikni kichikroq qilish */
+      font-size: 12px; /* shrift hajmini kichikroq qilish */
+  }
+
+  .freelanc__inneredu .edu__number span {
+      width: 30px; /* ichki element kengligini kichikroq qilish */
+      height: 30px; /* ichki element balandligini kichikroq qilish */
+      line-height: 30px; /* shrift vertikal joylashuvi */
+      font-size: 12px; /* ichki element shrift hajmi */
+  }
+
+  .freelancer__education .title {
+      font-size: 10px; /* Bosh sarlavha shrift hajmi */
+  }
+
+  .bborderdash {
+      padding-bottom: 20px; /* pastki bo'shliqni kamaytirish uchun qiymatini kamaytiring */
+  }
+
+  .pb-30 {
+      padding-bottom: 20px; /* pastki bo'shliqni kamaytirish uchun qiymatini kamaytiring */
+  }
+
+  .mb-30 {
+      margin-bottom: 20px; /* pastki bo'shliqni kamaytirish uchun qiymatini kamaytiring */
+  }
+
+  .fz-20 {
+      font-size: 18px; /* umumiy shrift hajmini kamaytirish uchun qiymatini kamaytiring */
+  }
+
+  .mb-24 {
+      margin-bottom: 16px; /* pastki bo'shliqni kamaytirish uchun qiymatini kamaytiring */
+      border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .mb-55 {
+   margin-bottom: 0px; /* pastki bo'shliqni kamaytirish uchun qiymatini kamaytiring */
+}
+
+span#tarif-title {
+   color: #ffffff;
+}
+form.search__component.mb-55.d-flex.align-items-center.justify-content-between.wow.fadeInUp {
+   box-sizing: border-box;
+   border-radius: 2px;
+   border-top-left-radius: 2px;
+   border-top-right-radius: 2px;
+   border-bottom-right-radius: 2px;
+   border-bottom-left-radius: 2px;
+   margin-top: 14px;
+}
+.flag-icon {
+   width: 30px; /* O'zingiz xohlagan o'lchamni qo'yishingiz mumkin */
+   height: 30px; /* O'zingiz xohlagan o'lchamni qo'yishingiz mumkin */
+   border-radius: 100%; /* Aylana shakl uchun */
+   object-fit: cover; /* Rasmni konteynerga moslashtirish uchun */
+   display: block;
+}
+
+.semibold-italic {
+   font-weight: 800; /* Semibold weight */
+}
+
+.divider {
+   display: flex;
+   align-items: center;
+   text-align: center;
+   margin: 20px 0;
+}
+
+.divider::before, .divider::after {
+   content: '';
+   flex: 1;
+   border-top: 1px dashed #C9C9C9; /* Chiziqning turi va rangini o'zgartirish */
+}
+
+.divider::before {
+   margin-right: 10px; /* Yozuv va chiziq orasidagi bo'shliq */
+}
+
+.divider::after {
+   margin-left: 10px; /* Yozuv va chiziq orasidagi bo'shliq */
+}
+
+.divider span {
+   padding: 0 10px; /* Yozuv atrofidagi bo'shliq */
+   font-weight: bold; /* Yozuvning qalinligi */
+   font-size: 12px;
+   line-height: 18%;
+   color: #767C89;
+}
+
+.orta {
+   text-align: center; /* Matnni o'rtaga joylashtirish */
+}
+
+.containeri {
+   max-width: 900px;
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.boyi {
+   height: 130px;
+}
+
+.eni {
+   width: 250px;
+}
